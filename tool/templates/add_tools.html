@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Log In</h2>
+    <h2>Add Tools</h2>
     <form action="" method="post">{% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Log In</button>
-
+        {{ form.as_p }}
+        <button type="submit">Add Tool</button>
     </form>
 {% endblock content %}

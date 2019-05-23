@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ tools.name }}</h2>
+<ul>
+    <li>{{ tool.type }}</li>
+    <li>{{ tool.work_field }}</li>
+    <li>{{ tool.manufacturer }}</li>
+    <li>{{ tool.replacement_cost }}</li>
+    <li>{{ tool.condition }}</li>
+    <li>{{ tool.borrowed }}</li>
+    <li>{{ tool.owner }}</li>
+    <li><img src="{{ tool.URL }}" alt="tool"></li>
+    <li>
+        <span><a href="{% url 'edit_tools' tool.pk %}">Edit</a></span>
+        <span><a href="{% url 'delete_tools' tool.pk %}">Delete</a></span>
+    </li>
+</ul>
+
+{% endblock content %}

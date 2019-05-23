@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Home</h2>
+<div class="row">
+    <ul>
+        <li class="col-12 col-md-2"><a href="{% url 'available' %}">Available Tools</a></li>
+        <li class="col-12 col-md-2"><a href="{% url 'all_tools' %}">All Tools</a></li>
+        <li class="col-12 col-md-2"><a href="{% url 'my_tools' %}">My Tools</a></li>
+        <li class="col-12 col-md-2"><a href="{% url 'user_list' %}">Users</a></li>
+        <li class="col-12 col-md-2"><a href="{% url 'add_tools' %}">Add Tools</a></li>
+    </ul>
+</div>
+
+{% endblock content %}
