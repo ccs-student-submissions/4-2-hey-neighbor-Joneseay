@@ -59,7 +59,7 @@ class UserToolsListView(ListView):
     template_name = 'users_tools.html'
 
     def get_queryset(self):
-        return Tool.objects.filter(username=self.kwargs['owner'])
+        return Tool.objects.filter(owner__id=self.kwargs['pk'])
 
 class MyToolsView(LoginRequiredMixin, ListView):
     model = Tool
@@ -67,3 +67,11 @@ class MyToolsView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Tool.objects.filter(owner=self.request.user)
+
+
+class BorrowToolView(LoginRequiredMixin, UpdateView):
+    model = Tool
+    template_name = 'edit_tools.html'
+    fields = ['borrowed']
+
+

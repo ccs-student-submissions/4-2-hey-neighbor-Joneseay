@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import HomePageView, AvailableToolsView, AddToolsView, ToolsEditView, ToolsDeleteView, ToolsDetailView, \
-    AllToolsView, MyToolsView, UserToolsListView
+    AllToolsView, MyToolsView, UserToolsListView, BorrowToolView
 
 
 urlpatterns = [
@@ -12,5 +12,6 @@ urlpatterns = [
     path('tools/<int:pk>/delete', ToolsDeleteView.as_view(), name='delete_tools'),
     path('tools/all/', AllToolsView.as_view(), name='all_tools'),
     path('tools/mytools/', MyToolsView.as_view(), name='my_tools'),
-    path('tools/<username>/owner', UserToolsListView.as_view(), name='users_tools')
+    path('tools/<int:pk>/owner/', UserToolsListView.as_view(), name='users_tools'),
+    path('tools/<int:pk>/borrowed/', BorrowToolView.as_view(), name='borrow_tool')
 ]

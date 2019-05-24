@@ -3,5 +3,11 @@
 {% block content %}
     {% for tool in object_list %}
         <a href="{% url 'detail_tools' tool.pk %}">{{ tool.name }}</a>
+            {% if tool.borrowed  %}
+                <a href="{% url 'borrow_tool' tool.pk %}">Borrow</a>
+            {% else %}
+                <p>Not Available</p>
+            {% endif %}
+
     {% endfor %}
 {% endblock content %}
