@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for tool in object_list %}
-        <a href="{% url 'detail_tools' tool.pk %}">{{ tool.name }}</a>
-            {% if not tool.borrowed %}
-                <a href="{% url 'borrow_tool' tool.pk %}">Return</a>
-            {% else %}
-                <span>Borrowed</span>
-            {% endif %}
-    {% endfor %}
+<h2 class="content-title">My Tools</h2>
+    <div class="row justify-content-around">
+        {% for tool in object_list %}
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'detail_tools' tool.pk %}">{{ tool.name }}</a></h5>
+                    <p class="card-text">If the tool has been returned to you please click the return button</p>
+                    {% if tool.borrowed %}
+                        <a href="{% url 'borrow_tool' tool.pk %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Return</a>
+
+                    {% else %}
+                        <button type="button" class="btn btn-lg btn-primary" disabled>Available</button>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

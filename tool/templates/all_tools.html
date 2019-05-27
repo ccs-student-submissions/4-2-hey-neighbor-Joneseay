@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h2 class="content-title">All Tools</h2>
     {% for tool in object_list %}
-        <a href="{% url 'detail_tools' tool.pk %}">{{ tool.name }}</a>
+        <div class="media">
+            <img src="{{ tool.URL }}" class="align-self-center mr-3" alt="tool">
+            <div class="media-body">
+                <h5 class="mt-0"><a href="{% url 'detail_tools' tool.pk %}">{{ tool.name }}</a></h5>
+                <p>Click on tool name to see full description of the tool</p>
+                <p class="mb-0">Login in to borrow</p>
+            </div>
+        </div>
     {% endfor %}
 {% endblock content %}

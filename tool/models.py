@@ -14,7 +14,7 @@ class Tool(models.Model):
     replacement_cost = models.CharField(max_length=250)
     URL = models.TextField()
     condition = models.TextField()
-    borrowed = models.BooleanField()
+    borrowed = models.BooleanField(default=False)
     owner = models.ForeignKey(
         'accounts.CustomUser',
         on_delete=models.CASCADE,
