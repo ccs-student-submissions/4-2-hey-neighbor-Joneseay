@@ -3,7 +3,7 @@
 {% block content %}
     {% for user in object_list %}
         <div class="list-group">
-            <a href="{% url 'users_tools' user.pk %}" class="list-group-item list-group-item-action active">{{ user.username }}</a>
+            <a href="{% url 'users_tools' user.pk %}" class="list-group-item list-group-item-action">{{ user.username }}</a>
         </div>
     {% endfor %}
 {% endblock %}

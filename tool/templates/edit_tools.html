@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Edit Tools</h2>
+<div class="tool-form">
+    <h2 class="content-title">Edit Tools</h2>
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <button type="sumbit">Edit Tool</button>
     </form>
+</div>
 {% endblock content %}

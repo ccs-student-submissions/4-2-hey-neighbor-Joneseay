@@ -1,3 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+a{
+    color: black;
+}
+
+
+
 body{
     background-color: white;
+}
+header{
+    height: 300px;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.main-title{
+    text-align: center;
+    font-family: luckiest Guy;
+    font-size: 60px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%)
+}
+.content-title{
+    text-align: center;
+    font-family: luckiest guy;
+}
+.list-group{
+    margin-bottom: 50px;
+}
+.home-tile{
+    text-align: center;
+    font-family: boogaloo;
+    padding: 20px;
+    height: 350px;
+}
+.home-tile > ol{
+    text-align: left;
+}
+.list-group-item{
+    width: 150px;
+    text-align: center;
+    font-family: boogaloo;
+}
+.social-bar > li{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.media{
+    margin-top: 50px;
+    font-family: boogaloo;
+}
+
+.media > img{
+    height: 150px;
+    width: 150px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.login-form{
+    font-family: boogaloo;
+    text-align:center;
+}
+
+.signup-form{
+    font-family: boogaloo;
+    text-align:center;
+}
+
+.tool-detail-list{
+    display: block;
+}
+
+.tool-detail-list > li > img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+.tool-detail{
+    font-family: boogaloo;
+}
+.tool-form{
+    font-family: boogaloo;
+    text-align: center;
+}
+.card{
+    margin-top: 50px;
+    font-family: boogaloo;
 }

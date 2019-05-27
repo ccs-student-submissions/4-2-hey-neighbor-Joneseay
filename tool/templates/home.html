@@ -1,15 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Home</h2>
-<div class="row">
-    <ul class="list-group list-group-horizontal-md flex-fill">
-        <li class="list-group-item"><a href="{% url 'available' %}">Available Tools</a></li>
-        <li class="list-group-item"><a href="{% url 'all_tools' %}">All Tools</a></li>
-        <li class="list-group-item"><a href="{% url 'my_tools' %}">My Tools</a></li>
-        <li class="list-group-item"><a href="{% url 'user_list' %}">Users</a></li>
-        <li class="list-group-item"><a href="{% url 'add_tools' %}">Add Tools</a></li>
+<h2 class="content-title">Home</h2>
+<div class="row justify-content-center">
+    <ul class="list-group list-group-horizontal-md">
+        <li class="list-group-item flex-fill"><a href="{% url 'available' %}">Available Tools</a></li>
+        <li class="list-group-item flex-fill"><a href="{% url 'all_tools' %}">All Tools</a></li>
+        <li class="list-group-item flex-fill"><a href="{% url 'my_tools' %}">My Tools</a></li>
+        <li class="list-group-item flex-fill"><a href="{% url 'user_list' %}">Users</a></li>
+        <li class="list-group-item flex-fill"><a href="{% url 'add_tools' %}">Add Tools</a></li>
     </ul>
+</div>
+<div class="row justify-content-around">
+    <div class="col-12 col-md-5 home-tile">
+        <h3>About Us</h3>
+        <p>Tool Shed Share is a community of people who believe in doing things for yourself. Sometimes this means that
+        you are going to need tools. Sometimes you only need the tool for this one job. This means you don't want to go
+        out and spend a ton of money on a tool you only use once. So we here at Tool Shed Share have banded together to
+        facilitate that. We connect tool owners with people who need their tools, so that we can all get things done.</p>
+        <a href="{% url 'signup' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+    </div>
+    <div class="col-12 col-md-5 home-tile">
+        <h3>The Rules</h3>
+        <ol>
+            <li>Be Respectful</li>
+            <li>Be Honest</li>
+            <li>Return tools in the condition in which you recieved them</li>
+            <li>If tool gets damaged the borrrower is responsible for full cost of repair or replacement</li>
+            <li>Be on time to meet ups</li>
+            <li>Return tools within agreed upon time period</li>
+        </ol>
+    </div>
 </div>
 
 {% endblock content %}

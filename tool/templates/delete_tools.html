@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <h2>Delete Tool</h2>
+<div class="tool-form">
+    <h2 class="content-title">Delete Tool</h2>
     <form action="" method="post">{% csrf_token %}
         <p>Are you sure you want to Delete</p>
         <button type="submit">Delete</button>
     </form>
-
+</div>
 {% endblock content %}

@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>{{ tools.name }}</h2>
-<ul>
-    <li>{{ tool.type }}</li>
-    <li>{{ tool.work_field }}</li>
-    <li>{{ tool.manufacturer }}</li>
-    <li>{{ tool.replacement_cost }}</li>
-    <li>{{ tool.condition }}</li>
-    <li>{{ tool.borrowed }}</li>
-    <li>{{ tool.owner }}</li>
-    <li><img src="{{ tool.URL }}" alt="tool"></li>
-    <li>
-        <span><a href="{% url 'edit_tools' tool.pk %}">Edit</a></span>
-        <span><a href="{% url 'delete_tools' tool.pk %}">Delete</a></span>
-    </li>
-</ul>
+<div class="tool-detail">
+    <h2 class="content-title">Tool Information</h2>
+    <h3 class="tool-name">{{ tool.name }}</h3>
+    <ul class="tool-detail-list">
+        <li><span>Type: </span>{{ tool.type }}</li>
+        <li><span>Work Field: </span>{{ tool.work_field }}</li>
+        <li><span>Manufacturer: </span>{{ tool.manufacturer }}</li>
+        <li><span>Replacement Cost: </span>{{ tool.replacement_cost }}</li>
+        <li><span>Condition: </span>{{ tool.condition }}</li>
+        <li><span>Is it Borrowed: </span>{{ tool.borrowed }}</li>
+        <li><span>Owner: </span>{{ tool.owner }}</li>
+        <li><img src="{{ tool.URL }}" alt="tool"></li>
+        <li>
+            <span><a href="{% url 'edit_tools' tool.pk %}" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Edit</a></span>
+            <span><a href="{% url 'delete_tools' tool.pk %}" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Delete</a></span>
+        </li>
+    </ul>
+</div>
 
 {% endblock content %}
