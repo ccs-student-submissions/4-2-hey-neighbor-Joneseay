@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h2 class="content-title">Owners</h2>
     {% for user in object_list %}
-        <div class="list-group">
-            <a href="{% url 'users_tools' user.pk %}" class="list-group-item list-group-item-action">{{ user.username }}</a>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ user.username }}</h5>
+                <a href="{% url 'users_tools' user.pk %}" class="btn btn-primary">Owner's Tools</a>
+              </div>
+            </div>
+          </div>
         </div>
     {% endfor %}
 {% endblock %}

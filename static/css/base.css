@@ -18,14 +18,25 @@ a{
 
 
 body{
-    background-color: white;
+    background-color: #ad4434;
 }
 header{
     height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: solid #d4ff51 1px;
 }
 
 footer{
     margin-top: 50px;
+}
+.main-image{
+    position: absolute;
+    height: 375px;
+    width: 375px;
+    left: -80px;
+    top: -30px;
+    border-radius: 50%;
 }
 
 .main-title{
@@ -34,11 +45,14 @@ footer{
     font-size: 60px;
     top: 50%;
     position: relative;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    color: #d4ff51;
 }
 .content-title{
+    margin-top: 50px;
     text-align: center;
     font-family: luckiest guy;
+    color: #d4ff51;
 }
 .list-group{
     margin-bottom: 50px;
@@ -48,6 +62,8 @@ footer{
     font-family: boogaloo;
     padding: 20px;
     height: 350px;
+    background-color: white;
+    border-radius: 5px;
 }
 .home-tile > ol{
     text-align: left;
@@ -56,6 +72,7 @@ footer{
     width: 150px;
     text-align: center;
     font-family: boogaloo;
+    background-color: white;
 }
 .social-bar > li{
     font-size: 20px;
@@ -65,6 +82,8 @@ footer{
 .media{
     margin-top: 50px;
     font-family: boogaloo;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .media > img{
@@ -77,11 +96,13 @@ footer{
 .login-form{
     font-family: boogaloo;
     text-align:center;
+    color: #d4ff51;
 }
 
 .signup-form{
     font-family: boogaloo;
-    text-align:center;
+    text-align:left;
+    color: #d4ff51;
 }
 
 .tool-detail-list{
@@ -95,12 +116,17 @@ footer{
 }
 .tool-detail{
     font-family: boogaloo;
+    color: #d4ff51;
 }
 .tool-form{
     font-family: boogaloo;
-    text-align: center;
+    text-align: left;
+    color: #d4ff51;
 }
 .card{
     margin-top: 50px;
     font-family: boogaloo;
+}
+.btn{
+    background-color: #7d51ff;
 }
