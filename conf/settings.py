@@ -25,7 +25,7 @@ SECRET_KEY = '(xzi*^s&o+%w8je5er87!p7h2&%+k%ri#bcj15kf8l!nvsd#h@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hey-neighbor-4-2-joneseay.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['hey-neighbor-4-2-joneseay.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
